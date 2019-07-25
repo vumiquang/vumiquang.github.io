@@ -1,0 +1,17 @@
+.code-demo{
+	font-family: monospace;
+	background: #151515;
+	color:white;
+	display: inline-block;
+	padding: 10px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.color-tag{
+	color:#FF5656;
+}
+.color-at{
+	color:#0DFF01;
+}
