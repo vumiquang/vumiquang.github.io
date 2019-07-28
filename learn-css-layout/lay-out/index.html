@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lay out</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		.element-1{
+			width: calc(100%/3);
+			height: 400px;
+			float:left;
+		}
+		.red{
+			background-color:red;
+		}
+		.green{
+			background-color: green;
+		}
+		.blue{
+			background-color: blue;
+		}
+		.clear-fix::after{
+			content: "";
+			display:table;
+			clear: both;
+		}
+		.element-2{
+			box-sizing: border-box;
+			width: calc((100% - 30px)/3);
+			height: 400px;
+			float:left;
+		}
+		.lay-out-2 .green{
+			margin:0 15px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>LAY OUT 1</h1>
+	<div class="lay-out-1 clear-fix">
+		<div class="element-1 red"></div>
+		<div class="element-1 green"></div>
+		<div class="element-1 blue"></div>
+	</div>
+	<h1>LAY OUT 2</h1>
+	<div class="lay-out-2">
+		<div class="element-2 red"></div>
+		<div class="element-2 green"></div>
+		<div class="element-2 blue"></div>
+	</div>
+</body>
+</html>
