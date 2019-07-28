@@ -267,3 +267,19 @@ ul.nav li:hover a{
 .icon-contact img{
 	width: 40px;
 }
+.btn-dau-trang{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	text-decoration: none;
+	text-align: center;
+	color:white;
+	background: #080348;
+}
+.btn-dau-trang i{
+	line-height: 40px;
+	font-size: 2rem;
+}
