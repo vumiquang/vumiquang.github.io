@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart</title>
+	<style type="text/css">
+		
+		.heart{
+			position: absolute;
+			top: calc(50% - 50px);
+			left:calc(50% - 50px);
+			transform: translate(-50%,-50%);
+			width: 100px;
+			height: 100px;
+			background: #FF6CA7;
+			transform: rotate(45deg);
+			animation: heart-run 2s ease-in-out 0.3s infinite alternate;
+		} 
+		.heart:before{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: absolute;
+			top: -50%;
+			background: #FF6CA7;
+			animation: heart-run 2s ease-in-out 0.3s infinite alternate;
+		}
+		.heart:after{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: absolute;
+			left: -50%;
+			background: #FF6CA7;
+			animation: heart-run 2s ease-in-out 0.3s infinite alternate;
+		}
+		@keyframes heart-run{
+			50%{
+				width: 150px;
+				height: 150px;
+			}
+			70%{
+				width: 130px;
+				height: 130px;
+			}
+			80%{
+				width: 150px;
+				height: 150px;
+			}
+			100%{
+				width: 100px;
+				height: 100px;
+			}
+		}
+	</style>
+</head>
+<body>
+		<div class="heart"></div>
+</body>
+</html>

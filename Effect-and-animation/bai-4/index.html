@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text effect</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			font-family: sans-serif;
+		}
+		.wrapper{
+			position: absolute;
+			top: 50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			font-size: 40px;
+			line-height: 40px;
+			font-weight: bold;
+			color:#5F5F5F;
+			text-align: center;
+		}
+		.wrapper>div{
+			height: 40px;
+		}
+		.flip{
+			overflow: hidden;
+			color:#fff;
+		}
+		.flip>div{
+			animation:run 5s linear infinite;
+			position: relative;
+		}
+		.flip>div>div{
+			margin-bottom: 40px;
+		}
+		.flip>div>div>div{
+			display: inline;
+			padding: 0 10px;
+		}
+		.flip>div>div:nth-child(1) div{
+			background: #C903E0;
+		}
+		.flip>div>div:nth-child(2) div{
+			background: #089C20;
+		}
+		.flip>div>div:nth-child(3) div{
+			background: #857B0D;
+		}
+
+		@keyframes run{
+			0%{top:-200px;}
+			5%{top: -160px;}
+			33%{top: -160px;}
+			38%{top: -80px;}
+			66%{top: -80px;}
+			71%{top: 0;}
+			99.99%{top: -0;}
+			100%{top:-200px;}
+		}
+	</style>
+</head>
+<body>
+		<div class="wrapper">
+			<div>START</div>
+			<div class="flip">
+				<div>
+				<div>
+					<div>LEARNING</div>
+				</div>
+				<div>
+					<div>TEACHING</div>
+				</div>
+				<div>
+					<div>CODING</div>
+				</div>
+				</div>
+			</div>
+			<div>TODAY</div>
+		</div>
+</body>
+</html>
