@@ -1,0 +1,164 @@
+@import url('../Pacifico-Regular.ttf');
+*{
+	margin:0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body{
+	background: url('../images/back.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+}
+.fix{
+	position: fixed;
+}
+.trang-tri-top{
+	top:-80px;
+	width: 100%;
+	height: 500px;
+	animation: top-run ease-in-out 1s 0.5s 1;
+}
+@keyframes top-run{
+	0%{top:-400px;}
+	100%{top:-80px;}
+}
+.trang-tri-top img{
+	width: 70%;
+}
+.trang-tri-top img:first-child{
+	position: absolute;
+	top:-80px;
+	right: -120px;
+}
+.trang-tri-top img:last-child{
+	position: absolute;
+	top:-150px;
+	left: -100px;
+}
+.gift{
+	width: 60%;
+	bottom: -50px;
+	right: 320px;
+	animation: bottom-run 1s ease-in-out 0.5s 1;
+}
+@keyframes bottom-run{
+	0%{bottom:-500px;}
+	100%{bottom:-50px;}
+}
+.cat{
+	width: 26%;
+    top: -45px;
+    left: -79px;
+    transform: rotate(128deg);
+    z-index: 0;
+    animation: cat-run 1s ease-in-out 1.5s 1 backwards;
+}
+@keyframes cat-run{
+	0%{left: -350px;}
+	100%{left: -79px;}
+}
+.meme{
+	z-index: 99;
+	width: 10%;
+	left: 0;
+	bottom: -12px;
+	animation: run 10s linear infinite;
+}
+@keyframes run{
+	0%{
+		left:30px;
+		bottom: -12px;
+		transform: rotate(0deg);
+	}
+	23%{
+		transform: rotate(0deg);
+	}
+	25%{
+		left:1200px;
+		bottom: -12px;	
+	}
+	27%{
+		transform: rotate(-90deg);
+	}
+	48%{
+		transform: rotate(-90deg);
+	}
+	50%{
+		left:1200px;
+		bottom: 420px;
+	}
+	53%{
+		transform: rotate(-180deg);
+	}
+	73%{
+		transform: rotate(-180deg);
+	}
+	75%{
+		left:30px;
+		bottom: 420px;
+	}
+	78%{
+		transform: rotate(-270deg);
+	}
+
+	97%{
+		left:30px;
+		bottom: -12px;
+		transform: rotate(-270deg);
+	}
+	100%{
+		transform: rotate(-360deg);
+	}
+}
+.emoji{
+	right: 0;
+	top:31%;
+	z-index: -1;
+	width: 30%;
+	animation: emoji 1s ease-in-out 1.5s 1 backwards;
+}
+@keyframes emoji{
+	0%{right: -700px;}
+	100%{right:0;}
+}
+.ballon-right{
+	width: 43%;
+    left: -137px;
+    bottom: -80px;
+    transform: rotate(15deg);
+    animation: ballon 1s ease-in-out 1.5s 1 backwards;
+}
+@keyframes ballon{
+	0%{left: -700px;}
+	100%{left: -137px;}
+}
+.hpbd{
+	top:40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 99;
+}
+.hpbd span::before{
+	content:"";
+	text-shadow: 0 5px 0 rgba(255,255,255,1);
+	text-transform: uppercase;
+	font-size: 50px;
+	font-family: 'Pacifico', cursive,sans-serif;
+	text-decoration: none;
+	animation: chu 4s linear 3s infinite;
+}
+@keyframes chu{
+	0%{content:"Happy";
+	color:#ee5253;}
+	20%{content:"BirthDAY";
+	color:#48dbfb;}
+	40%{content:"TO";
+	color:#10ac84;}
+	59.99%{color:#ff9f43;}
+	60%{content:"you";
+	font-size: 100px;}
+	100%{content:"you";
+	color:#ff9f43;}
+}
