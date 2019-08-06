@@ -12,34 +12,38 @@
 body{
 	background: url('../images/back.png');
 	background-size: cover;
+	width: 100%;
+	height:100vh;
 	background-repeat: no-repeat;
 	position: fixed;
+	overflow: hidden;
+	position: relative;
 }
 .fix{
 	position: fixed;
 }
 .trang-tri-top{
-	top:-80px;
+	top:-17%;
 	width: 100%;
 	height: 500px;
 	animation: top-run ease-in-out 1s 0.5s 1;
 }
 @keyframes top-run{
-	0%{top:-400px;}
-	100%{top:-80px;}
+	0%{top:-40%;}
+	100%{top:-17%;}
 }
 .trang-tri-top img{
 	width: 70%;
 }
 .trang-tri-top img:first-child{
 	position: absolute;
-	top:-80px;
-	right: -120px;
+	top:-13%;
+	right: -9%;
 }
 .trang-tri-top img:last-child{
 	position: absolute;
-	top:-150px;
-	left: -100px;
+	top:-26%;
+	left: -10%;
 }
 .gift{
 	width: 60%;
@@ -53,15 +57,15 @@ body{
 }
 .cat{
 	width: 26%;
-    top: -45px;
-    left: -79px;
+    top: -5%;
+    left: -5%;
     transform: rotate(128deg);
     z-index: 0;
     animation: cat-run 1s ease-in-out 1.5s 1 backwards;
 }
 @keyframes cat-run{
-	0%{left: -350px;}
-	100%{left: -79px;}
+	0%{left: -40%;}
+	100%{left: -5%;}
 }
 .meme{
 	z-index: 99;
@@ -124,19 +128,19 @@ body{
 	animation: emoji 1s ease-in-out 1.5s 1 backwards;
 }
 @keyframes emoji{
-	0%{right: -700px;}
+	0%{right: -50%;}
 	100%{right:0;}
 }
 .ballon-right{
 	width: 43%;
-    left: -137px;
-    bottom: -80px;
+    left: -10%;
+    bottom: -15%;
     transform: rotate(15deg);
     animation: ballon 1s ease-in-out 1.5s 1 backwards;
 }
 @keyframes ballon{
-	0%{left: -700px;}
-	100%{left: -137px;}
+	0%{left: -40%;}
+	100%{left: -10%;}
 }
 .hpbd{
 	top:40%;
