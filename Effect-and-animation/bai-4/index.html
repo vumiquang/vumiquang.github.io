@@ -6,6 +6,7 @@
 		body{
 			margin: 0;
 			font-family: sans-serif;
+			box-sizing: border-box;
 		}
 		.wrapper{
 			position: absolute;
@@ -20,52 +21,37 @@
 		}
 		.wrapper>div{
 			height: 40px;
+		/*	overflow: hidden;*/
 		}
 		.flip{
-			/*overflow: hidden;*/
-			color:#fff;
+			
 		}
-		.flip>div{
-			animation:run 5s linear infinite;
+		.flip div{
+			line-height: 40px;
 			position: relative;
+			height: 40px;
+			padding:0 10px;
+			color:#fff;
+			animation: run-flip 3s ease-in-out infinite;
 		}
-		.flip>div>div{
-			margin-bottom: 40px;
+		.flip div:nth-child(1){
+			background-color: green;
 		}
-		.flip>div>div>div{
-			display: inline;
-			padding: 0 10px;
+		.flip div:nth-child(2){
+			background-color: blue;
 		}
-		.flip>div>div:nth-child(1) div{
-			background: #C903E0;
+		.flip div:nth-child(3){
+			background-color: red;
 		}
-		.flip>div>div:nth-child(2) div{
-			background: #089C20;
-		}
-		.flip>div>div:nth-child(3) div{
-			background: #857B0D;
-		}
-
-		/*@keyframes run{
-			0%{top:-80px;}
-			5%{top: 0px;}
-			33%{top: 0px;}
-			38%{top: -80px;}
-			66%{top: -80px;}
-			71%{top: -160px;
-				left: -100%}
-			99.99%{top: -160px;
-				left: 0}
-			100%{top: -160px;
-				left: 0}
-		}*/
 	</style>
 </head>
 <body>
 		<div class="wrapper">
 			<div>START</div>
 			<div class="flip">
-				<div></div>
+				<div>CODING</div>
+				<div>TEACHING</div>
+				<div>LEARNING</div>
 			</div>
 			<div>TODAY</div>
 		</div>

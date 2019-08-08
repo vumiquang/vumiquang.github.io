@@ -20,11 +20,12 @@ body{
 }
 .wrapper div{
 	height: 130px;
+	border: 2px solid #fff;
+	overflow: hidden;
 }
 .wrapper div img{
 	width: 100%;
 	height: 100%;
-	border: 2px solid #fff;
 	transition: all 0.5s;
 }
 .wrapper div img:hover{
