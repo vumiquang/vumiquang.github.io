@@ -30,6 +30,7 @@ ul{
 	text-transform: uppercase;
 	display: block;
 	font-weight: 500;
+	/*border-bottom: 2px solid transparent;*/
 }
 .container>ul::after{
 	content: "";
@@ -49,10 +50,10 @@ ul{
 .btn-vip{
 }
 .btn-vip a{
-	vertical-align: middle;
 	padding: 11px 15px !important;
 }
 .btn-vip img{
+	vertical-align: middle;
 	width: 50px;
 	height: 25px;
 }
