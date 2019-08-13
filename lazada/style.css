@@ -5,7 +5,8 @@
 	text-decoration: none;
 	list-style: none;
 	--color-background:#fff;
-	--color-hover-background:#E7E5E5;
+	--color-hover-background:#EAEAEA;
+	--color-text-hover:#f36d00;
 }
 body{
 	font-size: 13px;
@@ -38,7 +39,7 @@ ul>li>a{
 }
 ul>li:hover>a{
 	background: var(--color-hover-background);
-	color:#DB7700;
+	color:var(--color-text-hover);
 }
 ul>li>a>span{
 	position: absolute;
