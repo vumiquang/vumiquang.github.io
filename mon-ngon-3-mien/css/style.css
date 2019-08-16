@@ -175,7 +175,7 @@ header{
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.sec-menu h1{
+.sec h1{
 	font-size: 4em;
 	color:#3C3C3C;
 	margin-top:20px;
@@ -191,7 +191,7 @@ header{
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
-	margin: 50px 0;
+	margin:20px 0;
 }
 .food-name{
 	font-size: 2em;
@@ -199,17 +199,40 @@ header{
 	margin: 20px 0 5px 0;
 }
 .food-image{
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	overflow: hidden;
 	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+	position: relative;
 }
 .food-image img{
+	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s;
 }
-.food-1 img{
-	transform: translateX(-40px);
+.food-image::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	border-radius: 50%;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 0.5s;
+}
+.food:hover .food-image::after{
+	width: 0;
+	height: 0;
+}
+.food:hover .food-image img{
+	transform:scale(1.2);
+}
+.food:hover .food-name{
+	color:#710707;
 }
 .food-price{
 	color:#3C3C3C;
@@ -345,11 +368,55 @@ header{
 }
 footer{
 	background:#1C1C1C;
+	color:#D8D8D8;
 }
 footer .container{
 	display: flex;
 }
-.contact{
+footer .container>div{
+	flex:0 0 25%;
+	padding:0 10px;
+}
+.logo-footer{
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	margin-bottom: 7px; 
+}
+.logo-footer img{
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+}
+.footer-contact{
+	line-height: 3em;
+}
+.footer-contact b{
+	color: #fff;
+}
+footer .container>div h3{
+	font-size: 1.5em;
+	color:#fff;
+}
+.line{
+	width: 50px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 40px 0 20px 0;
+}
+footer .container>div ul li{
+	line-height: 3em;
+}
+.footer-menu a{
+	color:#D8D8D8;
+}
+.footer-time ul li{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+/*.contact{
 	width:50%;
 }
 .anh-gt{
@@ -389,4 +456,4 @@ footer .container{
 }
 .icon-social span a{
 	color:#D3D3D3;
-}
+}*/

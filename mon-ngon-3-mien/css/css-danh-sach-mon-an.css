@@ -1,0 +1,73 @@
+.sec-center{
+	text-align: center;
+}
+
+.list-food{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	line-height: 1.5em;
+	justify-content: space-between;
+}
+.list-food>a{
+
+	display: flex;
+	flex:0 0 45%;
+	align-items: flex-end;
+	height: 120px;
+	margin: 40px 20px;
+	padding:10px 0;
+	border-bottom: 1px dashed rgba(0,0,0,0.5); 
+}
+.thumb-img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 10px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	transition: all 0.3s;
+}
+.list-food>a:hover .thumb-img{
+	transform: scale(1.125);
+}
+.list-food>a:hover h3{
+	color:red;
+}
+.list-food img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.food-info-mini{
+	text-align: left;
+	width: 60%;
+}
+.list-food h3{
+	font-family: 'Roboto Condensed', sans-serif;
+	color:#3C3C3C;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.list-food p{
+	font-family: 'Roboto Condensed', sans-serif;
+	color:rgba(0,0,0,0.5);
+}
+.cost{
+	margin-left: auto; 
+	color: #3C3C3C;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.mien-trung{
+	background-image: url('../images/bun-bo-hue.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.mien-trung h1,.mien-trung h3,.mien-trung p,.mien-trung .cost{
+	color:#fff;
+}
+.mien-trung .list-food>a{
+	border-bottom: 1px dashed rgba(255,255,255,0.5); 
+}
