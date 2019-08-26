@@ -1,0 +1,239 @@
+
+*{
+	box-sizing: border-box;
+}
+div.container{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	perspective: 900px
+}
+div.wrapper{
+	width: 100px;
+	height: 100px;
+	transform-style: preserve-3d; 
+	animation: animate 5s linear infinite;
+}
+@keyframes animate{
+	0%{
+		transform: rotateY(0deg) ;
+	}
+	100%{
+		transform: rotateY(360deg);
+	}
+}
+div.wrapper>div{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	/*transform-origin: center;*/
+}
+div.wrapper>div:nth-child(1){
+	background-color: red;
+	transform: translateX(50px) rotateY(90deg);
+	animation: run-1 10s linear infinite;
+	background-image: url('../image/anh1.jpg');
+	background-size: cover;
+}
+@keyframes run-1{
+	0%{
+		transform: translateX(50px) rotateY(90deg);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateX(50px) rotateY(90deg);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(150px,-50px,-50px) rotateY(90deg);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform: translate3d(150px,-50px,-50px)   rotateY(90deg);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform: translateX(50px) rotateY(90deg);
+		width: 100px;
+		height: 100px;
+	}
+}
+div.wrapper>div:nth-child(2){
+	background-color: #10C8C2;
+	transform: translateX(-50px) rotateY(90deg);
+	animation: run-2 10s linear infinite;
+	background-image: url('../image/anh2.jpg');
+	background-size: cover;
+}
+@keyframes run-2{
+	0%{
+		transform: translateX(-50px) rotateY(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateX(-50px) rotateY(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(-250px,-50px,-50px) rotateY(-90deg);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform: translate3d(-250px,-50px,-50px)   rotateY(-90deg);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform: translateX(-50px) rotateY(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+}
+
+div.wrapper>div:nth-child(3){
+	background-color: #9E13AB;
+	transform: translateZ(50px);
+	animation: run-3 10s linear infinite;
+	background-image: url('../image/anh3.jpg');
+	background-size: cover;
+}
+@keyframes run-3{
+	0%{
+		transform: translateZ(50px);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateZ(50px);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(-50px,-50px,150px);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform:  translate3d(-50px,-50px,150px);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform:  translateZ(50px);
+		width: 100px;
+		height: 100px;
+	}
+}
+
+div.wrapper>div:nth-child(4){
+	background-color: #DCE906;
+	transform: translateZ(-50px);
+	animation: run-4 10s linear infinite;
+	background-image: url('../image/anh4.jpg');
+	background-size: cover;
+}
+@keyframes run-4{
+	0%{
+		transform: translateZ(-50px);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateZ(-50px);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(-50px,-50px,-250px);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform:  translate3d(-50px,-50px,-250px);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform:  translateZ(-50px);
+		width: 100px;
+		height: 100px;
+	}
+}
+div.wrapper>div:nth-child(5){
+	background-color: #0B2276;
+	transform: translateY(-50px) rotateX(90deg);
+	animation: run-5 10s linear infinite;
+	background-image: url('../image/anh5.jpg');
+	background-size: cover;
+}
+@keyframes run-5{
+	0%{
+		transform: translateY(-50px) rotateX(90deg);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateY(-50px) rotateX(90deg);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(-50px,-250px,-50px) rotateX(90deg);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform:translate3d(-50px,-250px,-50px) rotateX(90deg);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform: translateY(-50px) rotateX(90deg);
+		width: 100px;
+		height: 100px;
+	}
+}
+
+div.wrapper>div:nth-child(6){
+	background-color: #E65100;
+	transform: translateY(50px) rotateX(90deg);
+	animation: run-6 10s linear infinite;
+	background-image: url('../image/anh6.jpg');
+	background-size: cover;
+}
+@keyframes run-6{
+	0%{
+		transform: translateY(50px) rotateX(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+	50%{
+		transform: translateY(50px) rotateX(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+	60%{
+		transform: translate3d(-50px,150px,-50px) rotateX(-90deg);
+		width: 200px;
+		height: 200px;
+	}
+	90%{
+		transform:translate3d(-50px,150px,-50px) rotateX(-90deg);
+		width: 200px;
+		height:200px;
+	}
+	100%{
+		transform: translateY(50px) rotateX(-90deg);
+		width: 100px;
+		height: 100px;
+	}
+}
+
