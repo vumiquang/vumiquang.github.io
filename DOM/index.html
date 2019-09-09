@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn DOM</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div.container{
+			width: 80%;
+			display: flex;
+			margin:100px auto;
+			justify-content: space-between;
+		}
+		p.paragraph{
+			font-family: sans-serif;
+			flex:0 0 30%;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<p class="paragraph" id="p1">
+		PARAGRAPH 1
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+	</p>
+	<p  class="paragraph" id="p2">
+		PARAGRAPH 2
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+	</p>
+	<p  class="paragraph" id="p3">
+		PARAGRAPH 3
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quia dignissimos placeat asperiores similique libero, explicabo laudantium ipsum nihil repellendus.
+	</p>
+	</div>
+<script type="text/javascript">
+	var paraOne = document.getElementById('p1');
+	var paraTwo = document.getElementById('p2');
+	var paraThree = document.getElementById('p3');
+
+
+//bài 1
+	var changeColor = function(){
+		paraOne.style.color = 'green';
+		paraTwo.style.color = 'yellow';
+		paraThree.style.color = 'red';
+	}
+
+//bài 2
+	var changeBgColor = function(color){
+		var elementBody = document.getElementsByTagName('body');
+		elementBody[0].style.background = color;
+	}
+
+//bài 3
+	var copyContent = function(para1,para2){
+		if(String(para1).includes('p')){
+		var	copy1 = document.getElementById(para1);
+		var	copy2 = document.getElementById(para2);
+		}
+		else{
+		var	copy1 = document.querySelectorAll(".container p:nth-child("+para1+")")[0];
+		var	copy2 = document.querySelectorAll(".container p:nth-child("+para2+")")[0];
+		}
+
+		copy2.innerHTML = copy1.innerHTML;
+	}
+
+//bài 4
+	var changeFontSize = function(x){
+		let elementP = document.getElementsByTagName('p');
+		elementP[0].style.fontSize = x+'px';
+		elementP[1].style.fontSize = x+'px';
+		elementP[2].style.fontSize = x+'px';
+	}
+
+//bài 5
+	var increaseFontSize = function(para){
+
+		//kiểm tra truyền vào id hay số thứ tự
+		if(String(para).includes('p')){
+		var	elementP = document.getElementById(para);
+		}
+		else{
+		var	elementP = document.querySelectorAll(".container p:nth-child("+para+")")[0];
+		}
+
+		//lấy font-size
+		var font_size = window.getComputedStyle(elementP, null).getPropertyValue("font-size");
+		font_size = font_size.match(/\d/g);
+		font_size = font_size.join("");
+		font_size = Number(font_size) + 1;
+		if(font_size < 31){
+			console.log(font_size);
+			elementP.style.fontSize = String(font_size+'px');
+		}
+	}
+
+
+//bài 6
+	var decreaseFontSize = function(para){
+
+		//kiểm tra truyền vào id hay số thứ tự
+		if(String(para).includes('p')){
+		var	elementP = document.getElementById(para);
+		}
+		else{
+		var	elementP = document.querySelectorAll(".container p:nth-child("+para+")")[0];
+		}
+
+		//lấy font-size
+		var font_size = window.getComputedStyle(elementP, null).getPropertyValue("font-size");
+		font_size = font_size.match(/\d/g);
+		font_size = font_size.join("");
+		font_size = Number(font_size) - 1;
+		if(font_size > 9){
+			console.log(font_size);
+			elementP.style.fontSize = String(font_size+'px');
+		}
+	}
+</script>
+</body>
+</html>
