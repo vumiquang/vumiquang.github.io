@@ -60,3 +60,15 @@ button.btn-spec{
 	color:white;
 	background-color: #0b0358;
 }
+.btn:active{
+	transform: translateY(3px);
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+#copyright{
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%,0);
+	color:white;
+	font-size: 12px;
+}

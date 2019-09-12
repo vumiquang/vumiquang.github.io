@@ -228,6 +228,7 @@ document.getElementById('btn-div').addEventListener('click',function(){
 }
 });
 
+
 document.getElementById('btn-equal').addEventListener('click',function(){
 	try {
  		var equal = eval(expression);
@@ -245,3 +246,19 @@ document.getElementById('btn-equal').addEventListener('click',function(){
 		elementDisplayResult.innerHTML = equal;
 	}
 });
+
+var pressElements = document.getElementsByClassName('btn');
+for(let i = 0;i < pressElements.length;i++){
+	pressElements[i].addEventListener('click',function(){
+		setTimeout(function(){
+			if(pressElements[i].getAttribute('class').includes('btn-spec'))
+				pressElements[i].setAttribute('class','btn press btn-spec');
+			else
+				pressElements[i].setAttribute('class','btn press');
+		},0);
+		if(pressElements[i].getAttribute('class').includes('btn-spec'))
+			pressElements[i].setAttribute('class','btn btn-spec');
+		else
+			pressElements[i].setAttribute('class','btn');
+	});
+}
