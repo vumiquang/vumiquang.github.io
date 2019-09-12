@@ -1,19 +1,49 @@
 var elementDisplayHistory = document.getElementById('history-content');
 var elementDisplayResult = document.getElementById('result-content');
 var expression ='';
+//kiểm tra đóng ngoặc = 0 nghĩa là chưa đóng, bằng 1 là đóng r
+var checkclosingParenthesis = 0;
+function sliceLastNumber(x){
+  var lastNumber = '';
+  for(let i = x.length - 1;i >= 0;i--){
+    if(x[i] == '(' || x[i] == '-' || x[i] == '+' || x[i] == '*' || x[i] == '/'){
+      break;
+    }
+    if(x[i] == ')')
+    	lastNumber += '';
+    else lastNumber += x[i];
+  }
+  lastNumber = lastNumber.split('').reverse().join('');
+  return lastNumber;
+}
+
+
+// tính giai thừa
+function factorial(n){
+  var fac = 1;
+  for(let i = 1;i <= n; i++)
+    fac *= i;
+  return fac;
+}
 
 
 document.getElementById('btn-fac').addEventListener('click',function(){
 	if(elementDisplayResult.innerText.length < 19){
 		elementDisplayResult.innerHTML += '!';
+		var lastNum = sliceLastNumber(expression);
+		var fac = 'factorial('+lastNum+')';
+		var indexLastNum = expression.lastIndexOf(lastNum);
+		expression = expression.split('');
+		expression.splice(indexLastNum,lastNum.length,fac) ;
+		expression = expression.join('');
 	}
-	
 	//add more
 });
 
 document.getElementById('btn-sqrt').addEventListener('click',function(){
 	if(elementDisplayResult.innerText.length < 19){
 	elementDisplayResult.innerHTML += '&#8730;(';
+	expression += 'Math.sqrt(';
 	}
 	//add more
 });
@@ -21,6 +51,13 @@ document.getElementById('btn-sqrt').addEventListener('click',function(){
 document.getElementById('btn-square').addEventListener('click',function(){
 	if(elementDisplayResult.innerText.length < 19){
 	elementDisplayResult.innerHTML += '<sup>2</sup>';
+
+	var lastNum = sliceLastNumber(expression);
+	var pow2 = 'Math.pow('+lastNum+',2)';
+	var indexLastNum = expression.lastIndexOf(lastNum);
+	expression = expression.split('');
+	expression.splice(indexLastNum,lastNum.length,pow2) ;
+	expression = expression.join('');
 	}
 	//add more
 });
@@ -28,6 +65,13 @@ document.getElementById('btn-square').addEventListener('click',function(){
 document.getElementById('btn-pow-3').addEventListener('click',function(){
 	if(elementDisplayResult.innerText.length < 19){
 	elementDisplayResult.innerHTML += '<sup>3</sup>';
+
+	var lastNum = sliceLastNumber(expression);
+	var pow3 = 'Math.pow('+lastNum+',3)';
+	var indexLastNum = expression.lastIndexOf(lastNum);
+	expression = expression.split('');
+	expression.splice(indexLastNum,lastNum.length,pow3) ;
+	expression = expression.join('');
 	}
 	//add more
 });
@@ -50,22 +94,42 @@ document.getElementById('btn-backspace').addEventListener('click',function(){
 	if(convertString.endsWith('<sup>2</sup>')){
 		convertString = convertString.slice(0,-12);
 		elementDisplayResult.innerHTML = convertString;
+
+		expression = expression.slice(0,-3);
+		var lastNum = sliceLastNumber(expression);
+		expression = expression.slice(0,expression.length - 9 -lastNum.length) + lastNum;
 	}
 	else if(convertString.endsWith('<sup>3</sup>')){
 		convertString = convertString.slice(0,-12);
 		elementDisplayResult.innerHTML = convertString;
+		expression = expression.slice(0,-3);
+		var lastNum = sliceLastNumber(expression);
+		expression = expression.slice(0,expression.length - 9 -lastNum.length) + lastNum;
+	}
+	else if(convertString.endsWith('!')){
+		convertString = convertString.slice(0,-1);
+		elementDisplayResult.innerHTML = convertString;
+
+		expression = expression.slice(0,-1);
+		var lastNum = sliceLastNumber(expression);
+		expression = expression.slice(0,expression.length - 10 -lastNum.length) + lastNum;
 	}
 	else if(convertString.length == 2 && convertString.includes('=')){
 		convertString = '';
 		elementDisplayResult.innerHTML = convertString;
 	}
+	else if(convertString.endsWith('√(')){
+		convertString = convertString.slice(0,-2);
+		elementDisplayResult.innerHTML = convertString;
+		expression = expression.slice(0,-10);
+	}
 	else{
 		convertString = convertString.slice(0,-1);
 		elementDisplayResult.innerHTML = convertString;
+		expression = expression.slice(0,-1);
 	}
-	expression = expression.slice(0,-1);
-	console.log(expression);
-
+		
+		
 	
 });
 document.getElementById('btn-clear').addEventListener('click',function(){
@@ -180,6 +244,4 @@ document.getElementById('btn-equal').addEventListener('click',function(){
  		elementDisplayHistory.innerHTML = elementDisplayResult.innerHTML;
 		elementDisplayResult.innerHTML = equal;
 	}
-	
-	
 });
