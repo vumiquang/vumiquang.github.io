@@ -1,7 +1,9 @@
 var elementDisplayHistory = document.getElementById('history-content');
 var elementDisplayResult = document.getElementById('result-content');
 var expression ='';
-//kiểm tra đóng ngoặc = 0 nghĩa là chưa đóng, bằng 1 là đóng r
+
+
+
 var checkclosingParenthesis = 0;
 function sliceLastNumber(x){
   var lastNumber = '';
@@ -53,7 +55,7 @@ document.getElementById('btn-square').addEventListener('click',function(){
 	elementDisplayResult.innerHTML += '<sup>2</sup>';
 
 	var lastNum = sliceLastNumber(expression);
-	var pow2 = 'Math.pow('+lastNum+',2)';
+	var pow2 = Math.pow(Number(lastNum),2);
 	var indexLastNum = expression.lastIndexOf(lastNum);
 	expression = expression.split('');
 	expression.splice(indexLastNum,lastNum.length,pow2) ;
@@ -67,7 +69,7 @@ document.getElementById('btn-pow-3').addEventListener('click',function(){
 	elementDisplayResult.innerHTML += '<sup>3</sup>';
 
 	var lastNum = sliceLastNumber(expression);
-	var pow3 = 'Math.pow('+lastNum+',3)';
+	var pow3 = Math.pow(Number(lastNum),3);
 	var indexLastNum = expression.lastIndexOf(lastNum);
 	expression = expression.split('');
 	expression.splice(indexLastNum,lastNum.length,pow3) ;
@@ -95,16 +97,25 @@ document.getElementById('btn-backspace').addEventListener('click',function(){
 		convertString = convertString.slice(0,-12);
 		elementDisplayResult.innerHTML = convertString;
 
-		expression = expression.slice(0,-3);
 		var lastNum = sliceLastNumber(expression);
-		expression = expression.slice(0,expression.length - 9 -lastNum.length) + lastNum;
+		var sqrtNum = Math.pow(Number(lastNum),1/2);
+		var indexLastNum = expression.lastIndexOf(lastNum);
+		expression = expression.split('');
+		expression.splice(indexLastNum,lastNum.length,String(sqrtNum));
+		expression = expression.join('');
+		
 	}
 	else if(convertString.endsWith('<sup>3</sup>')){
 		convertString = convertString.slice(0,-12);
 		elementDisplayResult.innerHTML = convertString;
-		expression = expression.slice(0,-3);
+		
 		var lastNum = sliceLastNumber(expression);
-		expression = expression.slice(0,expression.length - 9 -lastNum.length) + lastNum;
+		var cbrtNum = Math.pow(Number(lastNum),1/3);
+		var indexLastNum = expression.lastIndexOf(lastNum);
+		expression = expression.split('');
+		expression.splice(indexLastNum,lastNum.length,String(cbrtNum));
+		expression = expression.join('');
+		
 	}
 	else if(convertString.endsWith('!')){
 		convertString = convertString.slice(0,-1);
@@ -247,18 +258,3 @@ document.getElementById('btn-equal').addEventListener('click',function(){
 	}
 });
 
-var pressElements = document.getElementsByClassName('btn');
-for(let i = 0;i < pressElements.length;i++){
-	pressElements[i].addEventListener('click',function(){
-		setTimeout(function(){
-			if(pressElements[i].getAttribute('class').includes('btn-spec'))
-				pressElements[i].setAttribute('class','btn press btn-spec');
-			else
-				pressElements[i].setAttribute('class','btn press');
-		},0);
-		if(pressElements[i].getAttribute('class').includes('btn-spec'))
-			pressElements[i].setAttribute('class','btn btn-spec');
-		else
-			pressElements[i].setAttribute('class','btn');
-	});
-}
