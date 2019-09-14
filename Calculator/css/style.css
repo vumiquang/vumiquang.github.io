@@ -55,6 +55,7 @@ button.btn{
 	font-weight: bold;
 	color: #282828;
 	background-color: #fff;
+	overflow: hidden;
 }
 button.btn-spec{
 	color:white;
@@ -63,6 +64,7 @@ button.btn-spec{
 .btn:active{
 	transform: translateY(3px);
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.2) !important;
 }
 #copyright{
 	position: fixed;
@@ -72,3 +74,5 @@ button.btn-spec{
 	color:white;
 	font-size: 12px;
 }
+
+

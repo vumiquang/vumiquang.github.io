@@ -134,6 +134,11 @@ document.getElementById('btn-backspace').addEventListener('click',function(){
 		elementDisplayResult.innerHTML = convertString;
 		expression = expression.slice(0,-10);
 	}
+	else if(convertString == "Math Error"){
+		convertString = "";
+		elementDisplayResult.innerHTML = convertString;
+	}
+
 	else{
 		convertString = convertString.slice(0,-1);
 		elementDisplayResult.innerHTML = convertString;
@@ -248,7 +253,7 @@ document.getElementById('btn-equal').addEventListener('click',function(){
 		}
 		expression = equal.toString();
 		elementDisplayHistory.innerHTML = elementDisplayResult.innerHTML;
-		elementDisplayResult.innerHTML ='=' + equal;
+		elementDisplayResult.innerHTML = equal;
 	}
 	catch(err) {
 		expression = '';
