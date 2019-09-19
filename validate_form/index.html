@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <script src="font-awesome/all.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-form">
+            <h1>Create Account</h1>
+            <form action="sign-up-succes.html" method="GET" onsubmit="return checkValidate()">
+                    <div class="input-form">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="account" id="account" value="" placeholder="Account" />
+                        <p class="warner" id="warner-account"></p>
+                    </div>
+                    <div class="input-form">
+                        <i class="fas fa-key"></i>
+                        <input type="password" name="password" id="password" value="" placeholder="Password" />
+                        <p class="warner" id="warner-password"></p>
+                    </div>
+                    <h2 class="title-input">Gender</h2>
+                    <div class="input-form gender">
+                        Male <input class="gender-info" type="radio" name="gender" value="male" checked>
+                        Female <input class="gender-info" type="radio" name="gender" value="female">
+                    </div>
+                    <h2 class="title-input">Birth Day</h2>
+                    <div class="birth-day input-form">
+                        <div> <select name="birthday_day" id="day"></select> <span>Day</span></div>
+                        <div> <select name="birthday_month" id="month"></select><span>Month</span></div> 
+                        <div> <select name="birthday_year" id="year"></select><span>Year</span></div>   
+                        </div>
+                    <div class="input-form input-form">
+                            <i class="fas fa-map-marked"></i>
+                            <input type="text" name="address" id="address" value="" placeholder="Address"/>
+                            <p class="warner" id="warner-address"></p>
+                    </div>
+                    <div class="input-form">
+                            <i class="fas fa-phone-volume"></i>
+                            <input type="text" name="phone" id="phone" value="" placeholder="Phone number" />
+                            <p class="warner" id="warner-phone"></p>
+                        </div>
+                    <div class="input-form">
+                            <i class="fas fa-at"></i>
+                            <input type="email" id="email" name="emailaddress" placeholder="Email"/>
+                            <p class="warner" id="warner-email">hihi</p>
+                        </div>
+                    
+                    <button type="submit" id="btn-submit">Sign up</button>
+            </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

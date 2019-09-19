@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border:0;
+    outline: 0;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    background-image: url('https://i.ytimg.com/vi/tJV_XTDtKgM/maxresdefault.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.login-form{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    background-color: rgba(0,0,0,0.8);
+    background-position: center center;
+    border-radius: 10px;
+    width:300px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+.login-form h1{
+    margin:30px 0;
+    color:#fff;
+}
+.input-form{
+    widows: 240px;
+    display: flex;
+    justify-content: flex-end;
+    background-color:rgba(255,255,255,0.1);
+    padding-left:10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.svg-inline--fa{
+    color: #fff;
+    height:30px;
+    margin:0 5px 0 0;
+    width:30px;
+}
+.input-form input{
+    background-color:rgba(0,0,0,0);
+    width:210px;
+    height: 30px;
+    line-height: 30px;
+    padding:0 5px;
+    color:#fff;
+}
+.gender{
+    color:rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0) !important;
+    line-height: 15px;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+.gender input{
+    height:15px;
+}
+.birth-day{
+    height: 30px;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0) !important;
+    overflow: visible;
+}
+
+.birth-day div{
+    display:flex;
+    flex-direction: column;
+}
+.birth-day div select{
+  border-radius: 5px;
+  padding:3px 0;
+}
+.birth-day div select option{
+    border-radius: 5px;
+  }
+
+.birth-day span{
+    margin-top:5px;
+    text-align: center;
+    color:rgba(255,255,255,0.5);
+}
+#btn-submit{
+    width: 100%;
+    border-radius: 15px;
+    height: 30px;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+.title-input{
+    color:rgba(255,255,255,0.5);
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.warner{
+    position: absolute;
+    background: rgba(255,255,255,1);
+    padding:5px;
+    border-radius: 5px;
+    color:red;
+    top:-100%;
+    right:0;
+    display:none;
+    font-size: 12px;
+}
+.warner::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:#fff;
+    position: absolute;
+    right: 5px;
+    bottom: -4px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+
+
