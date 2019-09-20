@@ -61,8 +61,12 @@ body{
     justify-content: space-between;
     padding-left: 30px;
 }
+.gender label{
+    cursor: pointer;
+}
 .gender input{
     height:15px;
+    cursor: pointer;
 }
 .birth-day{
     height: 30px;

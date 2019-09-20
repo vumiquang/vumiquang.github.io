@@ -2,6 +2,7 @@ function makeDay(){
     var optionDay = "";
     for(let i = 1;i <= 31; i++)
         optionDay += "<option  value="+i+">"+i+"</option>";
+        optionDay += "<option value=\"-1\" selected=\"1\">"+"Ngày"+"</option>";
     $("#day").html(optionDay);
 }
 
@@ -9,14 +10,15 @@ function makeMonth(){
     var optionMonth = "";
     for(let i = 1;i <= 12; i++)
         optionMonth += "<option value="+i+">"+i+"</option>";
+        optionMonth += "<option value=\"-1\" selected=\"1\" >"+"Tháng"+"</option>";
     $("#month").html(optionMonth);
 }
 
 function makeYear(){
     var optionYear = "";
-    for(let i = 1905;i <= 2018; i++)
+    for(let i = 1905;i <= 2019; i++)
         optionYear += "<option value="+i+">"+i+"</option>";
-        optionYear += "<option selected=\"1\" value="+2019+">"+2019+"</option>";
+        optionYear += "<option value=\"-1\" selected=\"1\">"+"Năm"+"</option>";
     $("#year").html(optionYear);
 }
 
@@ -57,6 +59,21 @@ function checkValidate(){
     else if(/\s/.test($("#password").val())) {
         $("#warner-password").css("display","block");
         $("#warner-password").html("Không chứa dấu cách");
+        return false;
+    }
+    if($("#day :selected").val() == "-1") {
+        $("#warner-date").css("display","block");
+        $("#warner-date").html("Chọn thời gian hợp lệ");
+        return false;
+    }
+    if($("#month :selected").val() == "-1") {
+        $("#warner-date").css("display","block");
+        $("#warner-date").html("Chọn thời gian hợp lệ");
+        return false;
+    }
+    if($("#year :selected").val() == "-1") {
+        $("#warner-date").css("display","block");
+        $("#warner-date").html("Chọn thời gian hợp lệ");
         return false;
     }
     if($("#address").val() == "") {

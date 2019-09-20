@@ -25,14 +25,15 @@
                     </div>
                     <h2 class="title-input">Gender</h2>
                     <div class="input-form gender">
-                        Male <input class="gender-info" type="radio" name="gender" value="male" checked>
-                        Female <input class="gender-info" type="radio" name="gender" value="female">
+                        <label for="male">Male </label><input id="male" class="gender-info" type="radio" name="gender" value="male" checked>
+                        <label for="female">Female</label> <input id="female" class="gender-info" type="radio" name="gender" value="female">
                     </div>
                     <h2 class="title-input">Birth Day</h2>
                     <div class="birth-day input-form">
-                        <div> <select name="birthday_day" id="day"></select> <span>Day</span></div>
-                        <div> <select name="birthday_month" id="month"></select><span>Month</span></div> 
-                        <div> <select name="birthday_year" id="year"></select><span>Year</span></div>   
+                        <div> <select name="birthday_day" id="day"></select> </div>
+                        <div> <select name="birthday_month" id="month"></select></div> 
+                        <div> <select name="birthday_year" id="year"></select></div>   
+                        <p class="warner" id="warner-date"></p>
                         </div>
                     <div class="input-form input-form">
                             <i class="fas fa-map-marked"></i>
