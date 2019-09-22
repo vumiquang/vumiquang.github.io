@@ -22,7 +22,7 @@ function myTimer(){
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-    if(countdown < 1000) {
+    if(countdown < 1000 && days == 0 && hours == 0 && minutes == 0) {
       document.getElementsByClassName("time")[0].style.display = "none";
       document.getElementsByClassName("countDownText")[0].style.display = "none";
       document.getElementsByClassName("happy")[0].style.display = "block";
