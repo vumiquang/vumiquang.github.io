@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    font-size: 8vw;
+    background-image: linear-gradient(to right top, #03035b, #06076a, #0a0c79, #0d1288, #101898, #0f1998, #0f1a98, #0e1b98, #0b1788, #081378, #061068, #040c59);
+    color:white;
+}
+.countDownText{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    position: fixed;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    white-space: nowrap;
+    color:yellow;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+#canvas{
+    position: fixed;
+    z-index: 99999;
+    cursor: crosshair;
+	display: none;
+}
+.happy{
+    top:50%;
+}
+.time{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    white-space: nowrap;
+}
+.number{
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6),
+    2px 2px 1px rgba(0,0,0,0.6),
+    3px 3px 1px rgba(0,0,0,0.6),
+    4px 4px 1px rgba(0,0,0,0.6),
+    5px 5px 1px rgba(0,0,0,0.6);
+}
+.text{
+    font-size: 0.2em;
+    color:yellow;
+    text-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
+#yuuji{
+    position: fixed;
+    font-size: 0.1em;
+    letter-spacing: 0.2em;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
