@@ -59,14 +59,18 @@ body{
     background-color: rgba(0,0,0,0) !important;
     line-height: 15px;
     justify-content: space-between;
-    padding-left: 30px;
 }
 .gender label{
     cursor: pointer;
 }
 .gender input{
+    width:15px;
+    margin-right:10px;
     height:15px;
     cursor: pointer;
+}
+.gender div{
+    display:flex;
 }
 .birth-day{
     height: 30px;
