@@ -65,6 +65,12 @@ function checkValidate(){
         check++;    
     }
 
+    //kiểm tra repassword
+    if($("#password").val() != $("#repassword").val()) {
+        $("#warner-repassword").css("display","block");
+        $("#warner-repassword").html("Không trùng mật khẩu");
+        check++;
+    }
     //kiểm tra giới tính
     if(document.forms['sign-up']['gender'].value == ""){
         $('#warner-gender').css('display','block');
