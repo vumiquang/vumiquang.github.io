@@ -122,10 +122,16 @@ body{
     padding:5px;
     border-radius: 5px;
     color:red;
-    top:-100%;
+    top:-30px;
     right:0;
     display:none;
     font-size: 12px;
+}
+#warner-gender{
+    top:-30px !important;
+}
+#warner-gender::before{
+    display:none !important;
 }
 .warner::before{
     content:"";
