@@ -37,6 +37,7 @@ var students = [
 }
 ];
 
+//xắp sếp danh sách tăng
 function sortIncreaseStudents(){
     stdLength = students.length;
     for(let i = 0; i < (stdLength -1) ; i++)
@@ -48,11 +49,13 @@ function sortIncreaseStudents(){
           }
 }
 
+//xắp sếp danh sách giảm
 function sortReductionStudents(){
     sortIncreaseStudents();
     students.reverse();
 }
 
+//in danh sách ra màn hình
 function renderStudent(){
     $("#table-title").nextAll().remove();
     stdLength = students.length;
@@ -79,6 +82,7 @@ function renderStudent(){
 }
 renderStudent();
 
+//lấy dữ liệu từ bảng vào biên students
 function getTable(){   
     students = [];
     elementTable = document.getElementById("tbe-students").rows;
@@ -100,22 +104,24 @@ function getTable(){
     }
 }
 
-$('#up-icon').click(function(){
-    sortIncreaseStudents();
+// gán sự kiện tăng giảm cho nút
+$('#sort-icon').click(function(){
+    $('#sort-icon').toggleClass("active");
+    if($('#sort-icon').attr("class").includes("active")){
+        sortReductionStudents();
+        $('#down-icon').css("color","rgba(255,255,255,1)");
+        $('#up-icon').css("color","rgba(255,255,255,0.3)");
+    }
+    else{
+        sortIncreaseStudents();
+        $('#up-icon').css("color","rgba(255,255,255,1)");
+        $('#down-icon').css("color","rgba(255,255,255,0.3)");
+    }
     renderStudent();
-    $('#up-icon').css("color","rgba(255,255,255,1)");
-    $('#down-icon').css("color","rgba(255,255,255,0.3)");
-    deleteRow();
+    deleteRow();  
 });
 
-$('#down-icon').click(function(){
-    $('#down-icon').css("color","rgba(255,255,255,1)");
-    $('#up-icon').css("color","rgba(255,255,255,0.3)");
-    sortReductionStudents();
-    renderStudent();
-    deleteRow();
-});
-
+//xóa row table
 function deleteRow(){
     $('.delete').click(function(){
         $(this).parent().parent().remove();
