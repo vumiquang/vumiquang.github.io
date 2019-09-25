@@ -86,7 +86,7 @@
         }
 
         user.account = text.slice(text.indexOf('account=')+8,text.indexOf('&password='));
-        user.password = text.slice(text.indexOf('&password=')+10,text.indexOf('&gender='));
+        user.password = text.slice(text.indexOf('&password=')+10,text.indexOf('&repassword='));
         user.gender = text.slice(text.indexOf('&gender=')+8,text.indexOf('&birthday_day='));
         user.birthday = text.slice(text.indexOf('&birthday_day=')+14,text.indexOf('&birthday_month=')) + "/" + text.slice(text.indexOf('&birthday_month=')+16,text.indexOf('&birthday_year=')) + "/" + text.slice(text.indexOf('&birthday_year=')+15,text.indexOf('&address='))  ;
         user.address = text.slice(text.indexOf('&address=')+9,text.indexOf('&phone=')).replace(/\053/g," " );
