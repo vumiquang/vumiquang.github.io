@@ -9,84 +9,24 @@
     <script src="font-awesome/all.js"></script>
 </head>
 <body>
-    <h3 class="table-title">Danh sách học viên</h3>
-    <table class="table-students">
-        <tr>
+    <h3 class="table-name">Danh sách học viên</h3>
+    <table class="table-students" id="tbe-students">
+        <tr id="table-title">
             <th>Họ tên</th>
-            <th>Năm sinh</th>
+            <th style="display:flex; align-items: center;"> Năm sinh 
+                <span id="sort-icon">
+                <span id="up-icon"><i  class="fas fa-caret-up"></i></span>
+                <span id="down-icon"><i id="down-icon" class="fas fa-caret-down"></i></span>
+                </span>
+            </th>
             <th>Email</th>
             <th>Số điện thoại</th>
             <th></th>
         </tr>
-        <tr>
-            <td>Vũ Minh Quang</td>
-            <td>1997</td>
-            <td>Email@gmail.com</td>
-            <td>0123456789</td>
-            <td>
-                <div>
-                    <i class="fas fa-edit"></i>
-                    <span>Chỉnh sửa</span>
-                </div> 
-                |
-                <div>
-                    <i class="fas fa-trash-alt"></i>
-                    <span>Xóa</span>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Vũ Minh Quang</td>
-            <td>1997</td>
-            <td>Email@gmail.com</td>
-            <td>0123456789</td>
-            <td>
-                <div>
-                    <i class="fas fa-edit"></i>
-                    <span>Chỉnh sửa</span>
-                </div> 
-                |
-                <div>
-                    <i class="fas fa-trash-alt"></i>
-                    <span>Xóa</span>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Vũ Minh Quang</td>
-            <td>1997</td>
-            <td>Email@gmail.com</td>
-            <td>0123456789</td>
-            <td>
-                <div>
-                    <i class="fas fa-edit"></i>
-                    <span>Chỉnh sửa</span>
-                </div> 
-                |
-                <div>
-                    <i class="fas fa-trash-alt"></i>
-                    <span>Xóa</span>
-                </div>
-            </td>
-        </tr>
-        <tr>
-                <td>Vũ Minh Quang</td>
-                <td>1997</td>
-                <td>Email@gmail.com</td>
-                <td>0123456789</td>
-                <td>
-                    <div>
-                        <i class="fas fa-edit"></i>
-                        <span>Chỉnh sửa</span>
-                    </div> 
-                    |
-                    <div>
-                        <i class="fas fa-trash-alt"></i>
-                        <span>Xóa</span>
-                    </div>
-                </td>
-        </tr>
-            
+        
+                
     </table>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
