@@ -133,8 +133,7 @@ function deleteRow(){
         })
         $('#no-delete').click(function(){
             $('#confirm-delete').css("display","none");
-        })
-        
+        }) 
     });
 };
 

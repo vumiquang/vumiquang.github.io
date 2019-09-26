@@ -70,6 +70,7 @@ body{
 #confirm-delete h4{
     margin-bottom:20px;
     font-size: 2em;
+    color:#7d0101;
 }
 #confirm-delete span{
     margin: 0 20px;
@@ -79,7 +80,7 @@ body{
     box-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
 #confirm-delete span:hover{
-    background-color:red;
+    background-color:#7d0101;
     color:white;
 }
 
