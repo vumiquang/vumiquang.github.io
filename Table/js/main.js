@@ -37,7 +37,43 @@ var students = [
 }
 ];
 
-//xắp sếp danh sách tăng
+//xắp sếp danh sách tăng theo tên
+function sortNameIncreaseStudents(){
+    students.sort(function(a,b){
+        let typeA = a.name.toUpperCase();
+        let typeB = b.name.toUpperCase();
+        let compare = 0;
+        if(typeA > typeB)
+            compare = 1;
+        if(typeA < typeB)
+            compare = -1;
+        return compare;
+
+    })
+}
+
+//xắp sếp danh sách giảm theo tên
+function sortNameReductionStudents(){
+    students.sort(function(a,b){
+        let typeA = a.name.toUpperCase();
+        let typeB = b.name.toUpperCase();
+        let compare = 0;
+        if(typeA < typeB)
+            compare = 1;
+        if(typeA > typeB)
+            compare = -1;
+        return compare;
+
+    })
+}
+
+//xắp sếp danh sách giảm theo năm sinh
+function sortReductionStudents(){
+    sortIncreaseStudents();
+    students.reverse();
+}
+
+//xắp sếp theo tên tăng theo năm sinh
 function sortIncreaseStudents(){
     stdLength = students.length;
     for(let i = 0; i < (stdLength -1) ; i++)
@@ -47,12 +83,6 @@ function sortIncreaseStudents(){
             students[i] = students[j];
             students[j] = temp;
           }
-}
-
-//xắp sếp danh sách giảm
-function sortReductionStudents(){
-    sortIncreaseStudents();
-    students.reverse();
 }
 
 //in danh sách ra màn hình
@@ -110,13 +140,34 @@ $('#sort-icon').click(function(){
     if($('#sort-icon').attr("class").includes("active")){
         sortReductionStudents();
         $('#down-icon').css("color","rgba(255,255,255,1)");
-        $('#up-icon').css("color","rgba(255,255,255,0.3)");
+        $('#up-icon').css("color","rgba(255,255,255,0.2)");
     }
     else{
         sortIncreaseStudents();
         $('#up-icon').css("color","rgba(255,255,255,1)");
-        $('#down-icon').css("color","rgba(255,255,255,0.3)");
+        $('#down-icon').css("color","rgba(255,255,255,0.2)");
     }
+    $('#name-down-icon').css("color","rgba(255,255,255,0.2)");
+    $('#name-up-icon').css("color","rgba(255,255,255,0.2)");
+    renderStudent();
+    deleteRow();  
+});
+
+// gán sự kiện tăng giảm cho nút sắp xếp tên
+$('#name-sort-icon').click(function(){
+    $('#name-sort-icon').toggleClass("active");
+    if($('#name-sort-icon').attr("class").includes("active")){
+        sortNameReductionStudents();
+        $('#name-down-icon').css("color","rgba(255,255,255,1)");
+        $('#name-up-icon').css("color","rgba(255,255,255,0.2)");
+    }
+    else{
+        sortNameIncreaseStudents();
+        $('#name-up-icon').css("color","rgba(255,255,255,1)");
+        $('#name-down-icon').css("color","rgba(255,255,255,0.2)");
+    }
+    $('#up-icon').css("color","rgba(255,255,255,0.2)");
+    $('#down-icon').css("color","rgba(255,255,255,0.2)");
     renderStudent();
     deleteRow();  
 });

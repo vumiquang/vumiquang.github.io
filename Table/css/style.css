@@ -48,9 +48,7 @@ body{
 .table-students tr td div:first-child{
     color:#2980b9; 
 }
-#sort-icon{
-    display:flex;
-    flex-direction: column;
+#sort-icon,#name-sort-icon{
     margin-left:10px;
     cursor: pointer;
     line-height: 10px;
@@ -69,7 +67,7 @@ body{
 }
 #confirm-delete h4{
     margin-bottom:20px;
-    font-size: 2em;
+    font-size: 1.5em;
     color:#7d0101;
 }
 #confirm-delete span{
