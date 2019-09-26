@@ -124,8 +124,17 @@ $('#sort-icon').click(function(){
 //xóa row table
 function deleteRow(){
     $('.delete').click(function(){
-        $(this).parent().parent().remove();
-        getTable();
+        $('#confirm-delete').css("display","block");
+        let thisRow = this ;
+        $('#yes-delete').click(function(){
+            $('#confirm-delete').css("display","none");
+            $(thisRow).parent().parent().remove();
+            getTable();
+        })
+        $('#no-delete').click(function(){
+            $('#confirm-delete').css("display","none");
+        })
+        
     });
 };
 
