@@ -2,6 +2,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    border:0;
+    outline: 0;
 }
 body{
     font-family: sans-serif;
@@ -10,7 +12,7 @@ body{
 .table-name{
     text-align: center;
     margin:20px 0;
-    font-size: 2em;
+    font-size: 2.3em;
     color:#2c3e50;
 }
 .table-students{
@@ -26,6 +28,19 @@ body{
 .table-students th,.table-students td{
     padding: 0 20px 0 10px;
     text-align:left;
+    overflow: hidden;
+}
+.table-students th:first-child,.table-students td:first-child{
+    width: 200px;
+}
+.table-students th:nth-child(2),.table-students td:nth-child(2){
+    width: 150px;
+}
+.table-students th:nth-child(3),.table-students th:nth-child(4),.table-students td:nth-child(3),.table-students td:nth-child(4){
+    width: 250px;
+}
+.table-students th:nth-child(5),.table-students td:nth-child(5){
+    width: 200px;
 }
 .table-students tr:first-child{
     background-color:#2d3436 !important;
@@ -48,7 +63,7 @@ body{
 .table-students tr td div:first-child{
     color:#2980b9; 
 }
-#sort-icon,#name-sort-icon{
+.sort{
     margin-left:10px;
     cursor: pointer;
     line-height: 10px;
@@ -81,5 +96,53 @@ body{
     background-color:#7d0101;
     color:white;
 }
+.tool{
+    text-align:center;
+    margin:10px 0;
+}
+#search,#add{
+    cursor: pointer;
+}
+#search-type{
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    background-color: #2d3436;
+    color:#fff;
+}
+#search-text{
+    height: 25px;
+    line-height: 25px;
+    padding:0 10px;
+    background-color: #2d3436;
+    color:#fff;
+}
+#search-icon{
+    line-height: 25px;
+    display:inline-block;
+    height: 25px;
+    padding:0 10px;
+    background-color: #2d3436;
+    color:#fff;
+    font-size: 0.8em;
+}
 
-
+#add{
+    background: #2d3436;
+    color:#fff;
+    display:inline-block;
+    height:25px;
+    line-height: 25px;
+    padding:0 10px;
+}
+.add-finish{
+    display:flex;
+    align-items: center;
+    font-weight: bold;
+}
+.save{
+    font-weight:bold;
+}
+input:not(#search-text){
+    width:100%;
+}

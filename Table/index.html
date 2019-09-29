@@ -9,28 +9,57 @@
     <script src="font-awesome/all.js"></script>
 </head>
 <body>
-    <h3 class="table-name">Danh sách học viên</h3>
+    <h1 class="table-name">Danh sách học viên</h1>
+    <div class="tool">
+        <span id="search">
+            <input type="text" value="" id="search-text" placeholder="Nhập giá trị tìm kiếm">
+            <select id="search-type">
+                <option value="name">Họ tên</option>
+                <option value="birthday">Năm sinh</option>
+                <option value="email">Email</option>
+                <option value="phone">Số điện thoại</option>
+            </select>
+            <span id="search-icon">
+            Tìm kiếm
+            </span>
+        </span>
+        </div>
     <table class="table-students" id="tbe-students">
         <tr id="table-title">
             <th> <span>Họ tên</span> 
-                <span id="name-sort-icon">
-                    <span id="name-up-icon"><i class="fas fa-caret-up"></i></span>
-                    <span id="name-down-icon"><i class="fas fa-caret-down"></i></span>
+                <span id="name" class="sort">
+                    <span class="arrow-icon"><i class="fas fa-caret-up"></i></span>
+                    <span class="arrow-icon"><i class="fas fa-caret-down"></i></span>
                 </span>
             </th>
             <th><span>Năm sinh </span>
-                <span id="sort-icon">
-                <span id="up-icon"><i  class="fas fa-caret-up"></i></span>
-                <span id="down-icon"><i id="down-icon" class="fas fa-caret-down"></i></span>
+                <span id="birthday"  class="sort">
+                <span class="arrow-icon"><i  class="fas fa-caret-up"></i></span>
+                <span class="arrow-icon"><i id="down-icon" class="fas fa-caret-down"></i></span>
                 </span>
             </th>
-            <th>Email</th>
-            <th>Số điện thoại</th>
-            <th></th>
+            <th><span>Email</span>
+                <span id="email"  class="sort">
+                    <span class="arrow-icon"><i  class="fas fa-caret-up"></i></span>
+                    <span class="arrow-icon"><i id="down-icon" class="fas fa-caret-down"></i></span>
+                </span></th>
+            <th><span>Số điện thoại</span>
+                <span id="phone"  class="sort">
+                    <span class="arrow-icon"><i  class="fas fa-caret-up"></i></span>
+                    <span class="arrow-icon"><i id="down-icon" class="fas fa-caret-down"></i></span>
+                    </span></th>
+            <th>
+            </th>
         </tr>
         
                 
     </table>
+    <div class="tool">
+            <span id="add" class="add-btn">
+                    <i class="fas fa-plus"></i> Thêm
+            </span>
+    </div>
+   
     <div id="confirm-delete">
         <h4>Delete ?</h4>
         <span id="yes-delete">Yes</span>
