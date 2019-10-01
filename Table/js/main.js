@@ -60,7 +60,7 @@ function renderStudent(stdList){
         html += "<td class=\"birthday\">"+stdList[i].birthday+"</td>";
         html += "<td class=\"mail\">"+stdList[i].email+"</td>";
         html += "<td class=\"phone\">"+stdList[i].phone+"</td>";
-        html += "<td>";
+        html += "<td class=\"person-tool\">";
         html += "<div class=\"edit\">";
         html += "<i class=\"fas fa-edit\"></i>";
         html += "<span>Chỉnh sửa</span>";
@@ -168,19 +168,16 @@ function saveData(index){
 }
 
 //Tìm kiếm giá trị 
-$('#search-icon').click(function(){
-    let searchText = new RegExp(removeAccents($('#search-text').val()),'i');
-    let searchType =  $('#search-type').val();
-    let foundListStudents = [];
-    foundListStudents = students.filter(function(std){
-        return searchText.test(removeAccents(std[searchType]));
+$('#search-text').on('keyup',function(){
+    let searchText = removeAccents($('#search-text').val().toUpperCase());
+    $("#table-title").nextAll().unmark("mark");
+    $("#table-title").nextAll().filter(function(){
+        let textOrigin = $($(this).children()[0]).text() + $($(this).children()[1]).text() + $($(this).children()[2]).text() + $($(this).children()[3]).text();
+        $(this).toggle(removeAccents(textOrigin.toUpperCase()).indexOf(searchText) > -1);
+        $(this).mark(searchText);
+        $(this).children().last().unmark("mark");
     });
-    renderStudent(foundListStudents);
-    if($('#search-text').val() == "")
-         $('#add').show();
-    else
-        $('#add').hide();
-})
+});
 
 
 

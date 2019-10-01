@@ -103,28 +103,12 @@ body{
 #search,#add{
     cursor: pointer;
 }
-#search-type{
-    height: 25px;
-    line-height: 25px;
-    font-weight: bold;
-    background-color: #2d3436;
-    color:#fff;
-}
 #search-text{
     height: 25px;
     line-height: 25px;
     padding:0 10px;
     background-color: #2d3436;
     color:#fff;
-}
-#search-icon{
-    line-height: 25px;
-    display:inline-block;
-    height: 25px;
-    padding:0 10px;
-    background-color: #2d3436;
-    color:#fff;
-    font-size: 0.8em;
 }
 
 #add{
