@@ -234,16 +234,22 @@ function removeAccents(str) {
         let birthdayValue = $($(this).siblings()[1]).children().val();
         let emailValue = $($(this).siblings()[2]).children().val();
         let phoneValue = $($(this).siblings()[3]).children().val();
-        let std = {
-            name : nameValue,
-            birthday : birthdayValue,
-            email : emailValue,
-            phone : phoneValue
-            }
-        students.push(std);
-        renderStudent(students);
-        $('#add').removeClass("add-data");
-        $('#add').show();
+        if(nameValue == '' || birthdayValue == '' || emailValue == '' || phoneValue == ''){
+            alert('Không được để trống');
+        }
+        else {
+            let std = {
+                name : nameValue,
+                birthday : birthdayValue,
+                email : emailValue,
+                phone : phoneValue
+                }
+            
+            students.push(std);
+            renderStudent(students);
+            $('#add').removeClass("add-data");
+            $('#add').show();
+        }
       });
   }
 

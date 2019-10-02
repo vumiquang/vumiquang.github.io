@@ -47,12 +47,14 @@
 			font-size: 1.5em;
 			color:#fff;
 		}
+		.hidden{
+			display: none;
+		}
 		.menu{
 			width: 100%;
 			background-color: #182C61;
 			position: absolute;
 			top:80px;
-			display: none;
 		}
 		.menu li a:hover{
 			background-color: #3B3B98;
@@ -117,7 +119,7 @@
 			<h1 class="logo">One Piece World</h1>
 			<nav>
 				<span id="toggle-menu"><i class="fas fa-bars"></i></span>
-				<ul class="menu">
+				<ul class="menu hidden">
 					<li><a href="#">Trang chủ</a></li>
 					<li><a href="#">Nhân vật</a></li>
 					<li><a href="#">Cốt truyện</a></li>
@@ -140,7 +142,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$('#toggle-menu').click(function(){
-			$('.menu').toggle();
+			$('.menu').toggleClass('hidden');
 		})
 	</script>
 </body>

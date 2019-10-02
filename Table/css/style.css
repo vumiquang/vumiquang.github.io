@@ -80,6 +80,9 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
     display:none;
 }
+#confirm-delete div{
+    display: flex;
+}
 #confirm-delete h4{
     margin-bottom:20px;
     font-size: 1.5em;
@@ -93,8 +96,19 @@ body{
     box-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
 #confirm-delete span:hover{
-    background-color:#7d0101;
+    background-color:#f70303;
     color:white;
+}
+#no-delete:hover~span{
+    background:#fff;
+}
+#no-delete{
+    order:1;
+}
+#yes-delete{
+    order: 0;
+    background: #f70303;
+    color:#fff;
 }
 .tool{
     text-align:center;
