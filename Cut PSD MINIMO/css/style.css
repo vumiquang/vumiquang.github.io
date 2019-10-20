@@ -1,0 +1,97 @@
+@font-face{
+    font-family: fairplay;
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+    font-weight: 300;
+}
+@font-face{
+    font-family: ubuntu;
+    src: url('../fonts/Ubuntu-Light.ttf');
+    font-weight: 100;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    color:#626262;
+    cursor: pointer;
+}
+body{
+    font-size: 14pt;
+    font-family: 'fairplay',sans-serif;
+    color:#626262;
+}
+div.wrap-1060{
+    width:1060px;
+    margin:0 auto;
+}
+div.wrap-900{
+    width:900px;
+    margin:0 auto;
+}
+.tag{
+    font-family: 'ubuntu',sans-serif;
+    text-transform: uppercase;
+}
+h1{
+    font-size:1.9rem;
+    margin:30px 0;
+}
+header{
+    padding-top:70px;
+    margin-bottom:100px;
+}
+header>div.wrap-1060 div.logo{
+    float:left;
+}
+header>div.wrap-1060 ul{
+    float:right;
+    display:flex;
+    text-transform: uppercase;
+}
+header>div.wrap-1060 ul li{
+    margin-left:100px;
+}
+img.banner{
+    clear: both;
+    margin-top:70px;
+}
+p{
+    margin-bottom:45px;
+    line-height: 1.8rem;
+}
+.sec{
+    margin-bottom:120px;
+}
+.sec-gray{
+    padding:70px 0;
+    background-color:#f0f0f0;
+}
+.post{
+    width:420px;
+}
+footer{
+    height:100px;
+    background:#f0f0f0;
+}
+footer div.wrap-1060{
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.privacy a{
+    margin-right:20px;
+}
+.social a{
+    margin-left:15px;
+}
+a:hover{
+    color:#000;
+}
+
