@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration:none;
+            font-family: sans-serif;
+        }
+        a{
+            color:#fff;
+        }
+        header{
+            height:60px;
+            background:tomato;
+            padding:20px;
+            position: relative;
+        }
+        .tool{
+            display:none;
+        }
+        .logo{
+            text-align: center;
+        }
+        #toggle{
+            height: 20px;
+            position:absolute;
+            top:20px;
+            cursor: pointer;
+        }
+        nav ul{
+            display:none;
+            width: calc(100% - 20px);
+            text-align:center;
+            position:absolute;
+            top:60px;
+        }
+        nav ul li a{
+            background:dodgerblue;
+            display:block;
+            width: calc(100% - 20px);
+            height:40px;
+            line-height:40px;
+        }
+        nav ul li a:hover{
+            background:rgb(10, 73, 136);
+        }
+        .content{
+            width:100%;
+            padding:20px;
+        }
+        .content div{
+            height:500px;
+            background: dodgerblue;
+        }
+        .content div:first-child{
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width:540px){
+            #menu li:nth-child(4),#menu li:nth-child(5){
+                display: none;
+            }
+            #toggle{
+                display:none;
+            }
+            header{
+                display:flex;
+                justify-content: space-between;
+            }
+            ul{
+                display:flex !important;
+                position: relative !important;
+                width:360px !important;
+                top:-10px !important;
+            }
+            nav ul li a{
+                display:block;
+                width:120px;
+            }
+            .tool{
+                display:flex;
+            }
+            .content div:first-child{
+                width:calc(70% - 10px);
+                float:left;
+                margin-right:20px;
+                background:red;
+            }
+            .content div:last-child{
+                width:calc(30% - 10px);
+                float:right;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <a href="#"><div class="logo">LOGO</div></a>
+            <nav>
+                <img src="btn-menu.png" id="toggle">
+                <ul id="menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                </ul>
+            </nav>
+            <div class="tool">
+                <a href="#">Login</a> | 
+                <a href="#">Register</a>
+            </div>
+        </header>
+        <section class="content">
+            <div></div>
+            <div></div>
+        </section>
+    <script>
+        document.getElementById('toggle').addEventListener('click',function(){
+            var toggleMenu = document.getElementById('menu');
+            if(toggleMenu.style.display === 'none' || toggleMenu.style.display === ''){
+                document.getElementById('menu').style.display = 'block';
+            }
+            else{
+                document.getElementById('menu').style.display = 'none';
+            }  
+        });
+    </script>
+</body>
+</html>

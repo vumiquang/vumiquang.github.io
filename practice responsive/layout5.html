@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .blue{
+            background-color:dodgerblue;
+        }
+        .container{
+            padding:15px;
+        }
+        .fix-size{
+            width:90px;
+            height:30px;
+        }
+        .top{
+            display:flex;
+            margin-bottom:30px;
+            justify-content: space-between;
+        }
+        .bottom{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:20px;
+        }
+        .bottom div{
+            height:500px;
+        }
+        @media (max-width: 768px){
+            .fix-size{
+                width:60px;
+            }
+            .top{
+                margin-bottom:15px;
+                justify-content:space-between;
+            }
+            .top div{
+                margin:0 !important;
+            }
+            .bottom{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="blue fix-size"></div>
+            <div class="blue fix-size"></div>
+            <div class="blue fix-size"></div>
+        </div>
+        <div class="bottom">
+            <div class="blue"></div>
+            <div class="blue"></div>
+        </div>
+    </div>
+</body>
+</html>

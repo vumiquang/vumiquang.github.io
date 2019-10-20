@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration:none;
+            font-family: sans-serif;
+        }
+        header{
+            height:60px;
+            background:tomato;
+            padding:20px;
+            position: relative;
+        }
+        .logo{
+            display:none;
+        }
+        #toggle{
+            height:20px;
+            cursor: pointer;
+        }
+        ul{
+            display:none;
+            position:absolute;
+            top:60px;
+            text-align:center;
+            width:calc(100% - 20px);
+        }
+        ul li a{
+            display:block;
+            width:calc(100% - 20px);
+            height:40px;
+            line-height:40px;
+            background:dodgerblue;
+            color:#fff;
+        }
+        ul li a:hover{
+            background:rgb(7, 82, 156)
+        }
+        .content{
+            background:tomato;
+            height:800px;
+            margin:20px;
+        }
+        
+        @media (min-width:540px){
+            header{
+               display:flex;
+           }
+           .logo{
+               display:block;
+           }
+           #toggle,#home-page{
+               display:none;
+           }
+           ul {
+               display:flex !important;
+               position: relative;
+               top:-10px;
+               width:auto;
+           }
+           ul li a{
+               display:inline;
+               padding:5px 10px;
+           }
+           nav{
+               margin-left:auto;
+           }
+           
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <a href="#"><div class="logo">LOGO</div></a>
+            <nav>
+                <img src="btn-menu.png" id="toggle">
+                <ul id="menu">
+                        <li id="home-page"><a href="#">Trang chu</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="content"></section>
+    <script>
+        document.getElementById('toggle').addEventListener('click',function(){
+            var toggleMenu = document.getElementById('menu');
+            if(toggleMenu.style.display === 'none' || toggleMenu.style.display === ''){
+                document.getElementById('menu').style.display = 'block';
+            }
+            else{
+                document.getElementById('menu').style.display = 'none';
+            }  
+        });
+    </script>
+</body>
+</html>

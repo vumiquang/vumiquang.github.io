@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .blue{
+            background-color:dodgerblue;
+        }
+        div.container{
+            padding: 30px 20px 20px 20px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .content{
+            flex: 0 0 calc((100% - 35px)/3);
+            height:500px;
+        }
+        .wrap{
+            flex: 0 0 calc((100% - 35px)*2/3 + 15px);
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:15px;
+            height: 200px;
+        }
+        
+        @media (max-width: 768px){
+            div.container{
+            display:block;
+            padding:30px 15px 15px 15px;
+            }
+            .wrap,.container{
+                max-width:100%;
+            }
+            .wrap{
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>            
+        </div>
+        <div class="blue content"></div>
+    </div>
+</body>
+</html>
