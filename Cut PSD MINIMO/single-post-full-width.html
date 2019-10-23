@@ -10,18 +10,19 @@
     <script src="js/all.js"></script>
 </head>
 <body>
-    <header>
-        <div class="wrap-1060">
-            <div class="logo"><a href="#"><img src="images/logo.png" alt="minimo logo"></a></div>
-            <ul>
-                <li><a href="#">lifestyle</a></li>
-                <li><a href="#">photodiary</a></li>
-                <li><a href="#">music</a></li>
-                <li><a href="#">travel</a></li>
-            </ul>
-            <img src="images/banner.png" alt="banner" class="banner">
-        </div>
-    </header>
+        <header>
+                <div class="wrap-1060">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt="minimo logo"></a></div>
+                    <i class="fas fa-bars" id="toggle-menu" onclick="menuToggle()"></i>
+                    <ul class="menu" id="main-menu" style=" display:none;">
+                        <li><a href="#">lifestyle</a></li>
+                        <li><a href="#">photodiary</a></li>
+                        <li><a href="#">music</a></li>
+                        <li><a href="#">travel</a></li>
+                    </ul>
+                    <img src="images/banner.png" alt="banner" class="banner">
+                </div>
+            </header>
     <section class="sec hot-post">
         <div class="wrap-900">
         <span class="tag"><a href="#">photodiary</a></span>
@@ -161,6 +162,17 @@
             </div>
         </div>
         </footer>   
-    <script src="js/main.js"></script>
+        <script>
+                function menuToggle(){
+                    var toggleMenu = document.getElementById('main-menu');
+                    console.log(toggleMenu.style.display);
+                    if(toggleMenu.style.display === 'none' || toggleMenu.style.display === ''){
+                        toggleMenu.style.display = 'block';
+                    }
+                    else{
+                        toggleMenu.style.display = 'none';
+                    }  
+                }
+            </script>
 </body>
 </html>

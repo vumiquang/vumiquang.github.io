@@ -46,3 +46,22 @@
     font-family: 'ubuntu',sans-serif;
     font-size: 0.7rem;
 }
+@media (max-width:1059.9999px){
+
+    .wrap-660{
+        width:100%;
+    }
+    .hot-post .wrap-1060{
+        flex-direction: column;
+    }
+    .wrap-270{
+        margin-top:50px;
+    }
+    .wrap-1060{
+        padding:0 10px !important;
+    }
+    .wrap-270{
+        padding-top:50px;
+        margin:0 auto;
+    }
+}

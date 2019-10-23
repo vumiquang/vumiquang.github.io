@@ -13,7 +13,8 @@
     <header>
         <div class="wrap-1060">
             <div class="logo"><a href="#"><img src="images/logo.png" alt="minimo logo"></a></div>
-            <ul>
+            <i class="fas fa-bars" id="toggle-menu" onclick="menuToggle()"></i>
+            <ul class="menu" id="main-menu" style=" display:none;">
                 <li><a href="#">lifestyle</a></li>
                 <li><a href="#">photodiary</a></li>
                 <li><a href="#">music</a></li>
@@ -41,7 +42,7 @@
         <span class="tag"><a href="#">Leave a comment</a></span>
     </div>
     </section>
-    <section class="sec post-row">
+    <section class="sec post-row post-row-1">
         <div class="wrap-900">
         <article class="post post-1">
         <img src="images/post-1.png">
@@ -65,7 +66,7 @@
                 </article>
             </div>
     </section>
-    <section class="sec post-row">
+    <section class="sec post-row post-row-2">
         <div class="wrap-900">
             <article class="post post-3">
             <img src="images/post-3.png">
@@ -139,6 +140,17 @@
             </div>
         </div>
         </footer>   
-    <script src="js/main.js"></script>
+    <script>
+        function menuToggle(){
+            var toggleMenu = document.getElementById('main-menu');
+            console.log(toggleMenu.style.display);
+            if(toggleMenu.style.display === 'none' || toggleMenu.style.display === ''){
+                toggleMenu.style.display = 'block';
+            }
+            else{
+                toggleMenu.style.display = 'none';
+            }  
+        }
+    </script>
 </body>
 </html>
