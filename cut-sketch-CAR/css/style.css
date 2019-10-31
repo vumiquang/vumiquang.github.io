@@ -12,9 +12,6 @@
 .bg-btn-yellow{
     background-color:#DEFF06;
 }
-.bg-footer{
-    background-color:#342C2C;
-}
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;;
@@ -47,17 +44,23 @@ header .background{
     mix-blend-mode: overlay;
 }
 .container{
-    width:1270px;
+    max-width:1270px;
     margin:0 auto;
 }
+.banner-car{
+   
+}
 .img-car{
-    position: absolute;
-    bottom: -25%;
-    transform: translateX(50%);
+    display:block;
+    width:650px;
+    margin:70px auto 0 auto;
+}
+.img-car img{
+    width:100%;
 }
 nav{
     display:flex;
-    width:1321px;
+    max-width:1321px;
     margin-right:auto;
     margin-left:auto;
     justify-content: space-between;
@@ -94,8 +97,9 @@ header p{
     text-align:center;
     color:#fff;
     font-size: 20px;
-    width:600px;
+    max-width:600px;
     margin:0 auto;
+    margin-bottom:35px;
 }
 .form-search{
     width:590px;
@@ -162,7 +166,7 @@ header p{
 }
 .car-img>img{
     width:80%;
-    transition: all 0.5;
+    transition: all 0.5s;
 }
 .car-img>img:hover{
     transform: scale(1.2);
@@ -201,7 +205,7 @@ header p{
 }
 .post img{
     width:100%;
-    transition: all 2;
+    transition: all 2s;
 }
 .post img:hover{
     transform: scale(1.1);
@@ -263,3 +267,4 @@ footer .container{
 .footer-menu li{
     margin-left: 20px;
 }
+@media (max-width:
