@@ -22,7 +22,7 @@ a{
     cursor: pointer;
 }
 body{
-    font-size: 14pt;
+    font-size: 13pt;
     font-family: 'fairplay',sans-serif;
     color:#626262;
 }
@@ -62,7 +62,7 @@ img.banner{
 }
 p{
     margin-bottom:45px;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
 }
 .sec{
     margin-bottom:120px;

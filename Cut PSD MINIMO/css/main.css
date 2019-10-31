@@ -79,3 +79,8 @@
         margin-bottom: 0;
     }
 }
+@media (max-width: 576px){
+    .letter form input{
+        width:100%;
+    }
+}

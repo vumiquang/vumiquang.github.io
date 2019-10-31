@@ -1,0 +1,256 @@
+/* background: linear-gradient(171.9deg, #FFD200 14.55%, rgba(247, 151, 30, 0.983214) 91.73%); */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border:0;
+    outline: 0;
+}
+.bg-btn-yellow{
+    background-color:#DEFF06;
+}
+.bg-footer{
+    background-color:#342C2C;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;;
+}
+header{
+    height:606px;
+    position: relative;
+    padding-top:33px;
+}
+
+.background{
+    width:100%;
+    position: absolute;
+    z-index:-999;
+    background: linear-gradient(171.9deg, #FFD200 14.55%, rgba(247, 151, 30, 0.983214) 91.73%);
+}
+header .background{
+    top:-33px;
+    height:calc(100% + 33px);
+}
+.overlay{
+    background-image: url(../img/pexels-photo-315938.png);
+    z-index:-888;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-size: cover;
+    mix-blend-mode: overlay;
+}
+.container{
+    width:1270px;
+    margin:0 auto;
+}
+.img-car{
+    position: absolute;
+    bottom: -25%;
+    transform: translateX(50%);
+}
+nav{
+    display:flex;
+    width:1321px;
+    margin-right:auto;
+    margin-left:auto;
+    justify-content: space-between;
+}
+.menu{
+    display:flex;
+    height:44px;
+    align-items: center;
+}
+.menu li:not(:first-child){
+    margin-left:20px;
+}
+.menu li a{
+    color:#fff;
+}
+.btn-sign-up{
+    display: block;
+    height:44px;
+    text-align: center;
+    color:#757575 !important;
+    font-size: 13px;
+    padding:0 33px;
+    line-height:44px;
+    /* box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.127264); */
+}
+header h1{
+    margin-top:120px;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    font-size:35px;
+}
+header p{
+    text-align:center;
+    color:#fff;
+    font-size: 20px;
+    width:600px;
+    margin:0 auto;
+}
+.form-search{
+    width:590px;
+    margin:0 auto;
+    height:55px;
+    font-size: 13px;
+    display:flex;
+}
+.form-search button{
+    height:55px;
+    text-align: center;
+    color:#757575 !important;
+    padding:0 33px;
+    line-height:55px;
+    cursor: pointer;
+}
+.form-search input{
+    padding:0 20px;
+}
+.form-search input:nth-child(1){
+    width:300px;
+    height:55px;
+    border-right:1px solid rgba(0,0,0,0.2);
+}
+.form-search input:nth-child(2){
+    width:142px;
+    height:55px;
+}
+.hot-deal{
+    margin-top:210px;
+}
+.sec{
+    text-align:center;
+    margin-bottom: 80px;
+}
+.sec h2{
+    color:#333333;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sec p{
+    font-size: 20px;
+    color:#696969;
+    margin-bottom: 60px;
+}
+.list-car{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.car{
+    width:299px;
+    margin-bottom: 40px;
+}
+.car-img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:188px;
+    background: #EAEAEA;
+    border-radius:4px ;
+    margin-bottom: 10px;
+}
+.car-img>img{
+    width:80%;
+}
+.price-tag{
+    position: absolute;
+    top:30px;
+    right:-7px;
+    width:86px !important;
+}
+.price-num{
+    position: absolute;
+    color:#fff;
+    right:5px;
+    top:36px;
+}
+.car-name{
+    color:#333333;
+}
+.btn{
+    cursor: pointer;
+    font-family: 'Poppins',sans-serif;
+    height:60px;
+    line-height: 60px;
+    background-color:#F5A623;
+    color:#fff;
+    padding:0 10px;
+}
+.post{
+    display:block;
+    position: relative;
+    width:400px;
+    height:200px;
+    margin-bottom:50px;
+}
+.post img{
+    width:100%;
+}
+.post span{
+    position: absolute;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    color:#fff;
+    left:20%;
+}
+
+.letter{
+    text-align:center;
+    width:100%;
+    position: relative;
+    padding:80px 0;
+}
+.letter .background{
+    height:100%;
+    top:0;
+}
+.title-letter{
+    display:block;
+    font-size:40px;
+    font-weight: bold;
+    color:#fff;
+    margin-bottom: 10px;
+}
+.letter p{
+    font-size:20px;
+    color:#fff;
+    margin-bottom:35px;
+}
+.form-letter input{
+    width:442px !important ;
+}
+footer{
+    background:#342C2C;
+}
+footer .container>a{
+    font-size:24px !important;
+    font-weight: bold !important;
+}
+footer a{
+    color:#fff;
+}
+footer .container{
+    height:100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-menu{
+    display:flex;
+}
+.footer-menu li{
+    margin-left: 20px;
+}
