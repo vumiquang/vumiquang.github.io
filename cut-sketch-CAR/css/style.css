@@ -162,6 +162,10 @@ header p{
 }
 .car-img>img{
     width:80%;
+    transition: all 0.5;
+}
+.car-img>img:hover{
+    transform: scale(1.2);
 }
 .price-tag{
     position: absolute;
@@ -192,10 +196,15 @@ header p{
     position: relative;
     width:400px;
     height:200px;
+    overflow: hidden;
     margin-bottom:50px;
 }
 .post img{
     width:100%;
+    transition: all 2;
+}
+.post img:hover{
+    transform: scale(1.1);
 }
 .post span{
     position: absolute;
